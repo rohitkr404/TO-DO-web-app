@@ -35,10 +35,11 @@ public class TaskController {
     @PutMapping("/{taskId}")
     public ResponseEntity<TaskEntity> updateTask(@PathVariable Long taskId, @RequestBody TaskEntity task) {
         TaskEntity existingTask = userService.getTaskById(taskId);
-        if (existingTask != null) {
+        if (existingTask != null && task.getUserId() == existingTask.getUserId()) {
             existingTask.setName(task.getName());
             existingTask.setCompleted(task.isCompleted());
             existingTask.setDueDate(task.getDueDate());
+            existingTask.setDescription(task.getDescription());
             TaskEntity updatedTask = userService.updateTask(existingTask);
             return new ResponseEntity<>(updatedTask, HttpStatus.OK);
         }
