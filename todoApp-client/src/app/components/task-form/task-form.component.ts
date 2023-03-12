@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Task } from 'src/app/models/task.model';
 import { UserService } from 'src/app/services/user.service';
+import { DatePipe, formatDate } from '@angular/common';
+
 
 @Component({
   selector: 'app-task-form',
@@ -16,7 +18,7 @@ export class TaskFormComponent implements OnInit {
   isUpdateTask: boolean = false;
   
   constructor(private userService: UserService,private formBuilder: FormBuilder, public dialogRef: MatDialogRef<TaskFormComponent>, 
-    @Inject(MAT_DIALOG_DATA) public data: Task) {
+    @Inject(MAT_DIALOG_DATA) public data: Task, private datePipe: DatePipe) {
       if(data){
         this.task = data;
         this.isUpdateTask = true;
@@ -33,15 +35,16 @@ export class TaskFormComponent implements OnInit {
     });
   }
   
-  ngOnInit() {
-    this.taskForm = new FormGroup({
-      id: new FormControl(this.task.id),
-      name: new FormControl(this.task.name, Validators.required),
-      description: new FormControl(this.task.description),
-      dueDate: new FormControl(this.task.dueDate, Validators.required),
-      completed: new FormControl(this.task.completed)
+  ngOnInit(): void {
+    this.taskForm = this.formBuilder.group({
+      id: [this.task ? this.task.id : ''],
+      name: [this.task ? this.task.name : '', Validators.required],
+      description: [this.task ? this.task.description : ''],
+      completed: [this.task ? this.task.completed : false],
+      dueDate: [this.task ? formatDate(this.task.dueDate, 'yyyy-MM-dd', 'en') : '']
     });
-  }
+}
+
   
   onSubmit(): void {
     if(this.isUpdateTask){
@@ -50,7 +53,7 @@ export class TaskFormComponent implements OnInit {
         console.log('Task created:', task);
         // reset form and show success message
         this.task =  new Task();
-        this.userService.taskCreated.next();
+        this.userService.taskListUpdated.next();
       });
     }
     else{
@@ -59,7 +62,7 @@ export class TaskFormComponent implements OnInit {
         console.log('Task created:', task);
         // reset form and show success message
         this.task =  new Task();
-        this.userService.taskCreated.next();
+        this.userService.taskListUpdated.next();
       });
     }
     

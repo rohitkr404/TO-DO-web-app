@@ -1,0 +1,29 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" formControlName="username" />
+      <div *ngIf="registerForm.get('username')?.invalid && (registerForm.get('username')?.dirty || registerForm.get('username')?.touched)">
+        <div *ngIf="registerForm.get('username')?.errors?.['required']">Username is required.</div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" />
+      <div *ngIf="registerForm.get('password')?.invalid && (registerForm.get('password')?.dirty || registerForm.get('password')?.touched)">
+        <div *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</div>
+      </div>
+    </div>
+  
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword" />
+      <div *ngIf="registerForm.get('confirmPassword')?.invalid && (registerForm.get('confirmPassword')?.dirty || registerForm.get('confirmPassword')?.touched)">
+        <div *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">Confirm password is required.</div>
+        <div *ngIf="registerForm.get('confirmPassword')?.errors?.['matchPasswords']">Passwords do not match.</div>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!registerForm.valid">Register</button>
+  </form>
+  

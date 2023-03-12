@@ -23,7 +23,7 @@ export class TaskListComponent implements OnInit {
     this.userService.getTasksForUser(userId)
       .subscribe(tasks => this.tasks = tasks);
     
-    this.userService.taskCreated.subscribe(() => {
+    this.userService.taskListUpdated.subscribe(() => {
       this.userService.getTasksForUser(userId).subscribe(tasks => {
         this.tasks = tasks;
       });
@@ -50,9 +50,8 @@ export class TaskListComponent implements OnInit {
   }
   
   deleteTask(task: Task) {
-    this.userService.deleteTask(task).subscribe(deletedTask => {
-      const index = this.tasks.findIndex(t => t.id === deletedTask.id);
-      this.tasks.splice(index, 1);
+    this.userService.deleteTask(task).subscribe(res => {
+      this.userService.taskListUpdated.next();
     });
   }
   
