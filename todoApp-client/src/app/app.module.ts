@@ -9,10 +9,12 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DatePipe } from '@angular/common';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, TaskListComponent, TaskFormComponent
+  declarations: [AppComponent, LoginComponent, TaskListComponent, TaskFormComponent, RegisterComponent, RegisterComponent
     //, DashboardComponent
   ],
   imports: [
@@ -23,7 +25,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

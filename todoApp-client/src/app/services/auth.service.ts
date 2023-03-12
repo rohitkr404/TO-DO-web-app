@@ -17,5 +17,10 @@ export class AuthService {
     return this.http.post(url, loginData);
   }
 
+  register(registerData: Login): Observable<any> {
+    const url = `${this.apiUrl}/users/register`;
+    return this.http.post(url, registerData);
+  }
+
   // Add other auth related methods like logout, register etc.
 }

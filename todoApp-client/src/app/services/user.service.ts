@@ -9,7 +9,7 @@ import { Task } from '../models/task.model';
 export class UserService {
   
   private baseUrl = 'http://localhost:8080';
-  public taskCreated = new Subject<void>();
+  public taskListUpdated = new Subject<void>();
 
   constructor(private http: HttpClient) { }
 
