@@ -1,0 +1,52 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.modal label {
+  font-weight: bold;
+}
+
+.modal input[type="text"],
+.modal textarea,
+.modal input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.modal .form-check-label {
+  margin-left: 5px;
+}
+
+.modal button[type="submit"],
+.modal button[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.modal button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.modal button[type="button"] {
+  background-color: #ccc;
+  color: #000;
+}

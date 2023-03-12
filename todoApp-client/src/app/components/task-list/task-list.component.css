@@ -1,0 +1,90 @@
+.task-container {
+    margin-top: 20px;
+  }
+  
+  .task-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .task-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .task-info {
+    flex-grow: 1;
+  }
+  
+  .task-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .task-description {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  .task-due-date {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #999;
+  }
+  
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+  }
+  
+  .task-button {
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .update-button {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+  }
+  
+  .task-button:hover {
+    opacity: 0.8;
+  }
+  
+  .add-task-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .add-task-button:hover {
+    opacity: 0.8;
+  }
+  
