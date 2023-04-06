@@ -35,9 +35,13 @@ Note that all endpoints return appropriate HTTP status codes to indicate the suc
 This is a client-side Angular application for a TODO app. The UI is composed of multiple components:
 
 **Login Component:** A form to allow users to log in to the app.
+
 **Register Component:** A form to allow new users to create an account.
+
 **Task List Component:** Displays a list of tasks for the logged-in user.
+
 **Task Form Component:** A form to add or update a task.
+
 ## Login Component
 The LoginComponent contains a form to allow users to log in to the app. The form contains two fields: username and password. If the user is authenticated successfully, the application stores the user's data in the local storage and navigates to the Task List Component.
 
