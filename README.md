@@ -17,7 +17,7 @@ The server-side controllers of the TO-DO Web App are responsible for handling in
 
 **GET /users/{userId}/tasks:** This endpoint is used to get all the tasks of a user. It accepts a user ID as a path variable and returns a response with a list of all the tasks associated with that user.
 
-TaskController
+### TaskController
 **TaskController** is responsible for handling task-related requests such as creating a new task, getting a task by ID, updating a task, and deleting a task. Here are the endpoints available in the TaskController:
 
 **POST /tasks/:** This endpoint is used to create a new task. It accepts a JSON payload containing the task details and returns a response with the newly created task entity.
