@@ -3,7 +3,7 @@
 The server-side controllers of the TO-DO Web App are responsible for handling incoming requests and sending responses back to the client. There are two controllers: UserController and TaskController.
 
 ## UserController
-**'UserController'** is responsible for handling user-related requests such as registering a new user, logging in, getting user information, updating user information, and deleting a user account. Here are the endpoints available in the UserController:
+**UserController** is responsible for handling user-related requests such as registering a new user, logging in, getting user information, updating user information, and deleting a user account. Here are the endpoints available in the UserController:
 
 **POST /users/register:** This endpoint is used to register a new user. It accepts a JSON payload containing the user details and returns a response with the newly created user entity.
 
