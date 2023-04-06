@@ -64,5 +64,6 @@ To update an existing task: The form is pre-populated with the details of the ta
 The application uses the following services:
 
 **Auth Service:** This service handles user authentication and registration.
+
 **User Service:** This service handles CRUD operations for tasks.
 
