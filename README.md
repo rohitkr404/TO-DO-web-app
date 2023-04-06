@@ -1,4 +1,4 @@
-To use this to-do web app, simply navigate to http://to-do-client-static-bucket.s3-website.eu-north-1.amazonaws.com/tasks in your web browser.
+To use this to-do web app, simply navigate to http://to-do-client-static-bucket.s3-website.eu-north-1.amazonaws.com in your web browser.
 
 # todoApp-server
 
