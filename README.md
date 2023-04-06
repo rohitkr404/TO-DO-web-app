@@ -34,27 +34,28 @@ Note that all endpoints return appropriate HTTP status codes to indicate the suc
 # TODO App - Client Side
 This is a client-side Angular application for a TODO app. The UI is composed of multiple components:
 
-**Login Component**: A form to allow users to log in to the app.
-Register Component: A form to allow new users to create an account.
-Task List Component: Displays a list of tasks for the logged-in user.
-Task Form Component: A form to add or update a task.
-Login Component
+**Login Component:** A form to allow users to log in to the app.
+**Register Component:** A form to allow new users to create an account.
+**Task List Component:** Displays a list of tasks for the logged-in user.
+**Task Form Component:** A form to add or update a task.
+## Login Component
 The LoginComponent contains a form to allow users to log in to the app. The form contains two fields: username and password. If the user is authenticated successfully, the application stores the user's data in the local storage and navigates to the Task List Component.
 
-Register Component
+## Register Component
 The RegisterComponent contains a form to allow new users to create an account. The form contains two fields: username and password. If the user is registered successfully, the application logs a message to the console and navigates to the Login Component.
 
-Task List Component
+## Task List Component
 The TaskListComponent displays a list of tasks for the logged-in user. It fetches the tasks for the user from the server and displays them in a table. Users can also add a new task, edit or delete an existing task.
 
-Task Form Component
+## Task Form Component
 The TaskFormComponent is a form to add or update a task. It is used in two scenarios:
 
 To add a new task: The form contains three fields: name, description, and dueDate.
 To update an existing task: The form is pre-populated with the details of the task to be updated. The user can edit any of the fields.
-Services
+
+## Services
 The application uses the following services:
 
-Auth Service: This service handles user authentication and registration.
-User Service: This service handles CRUD operations for tasks.
+**Auth Service:** This service handles user authentication and registration.
+**User Service:** This service handles CRUD operations for tasks.
 
