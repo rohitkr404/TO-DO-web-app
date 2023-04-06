@@ -1,4 +1,4 @@
-# TO-DO Web App Server-Side Controllers
+# todoApp-server
 
 The server-side controllers of the TO-DO Web App are responsible for handling incoming requests and sending responses back to the client. There are two controllers: UserController and TaskController.
 
@@ -31,7 +31,7 @@ The server-side controllers of the TO-DO Web App are responsible for handling in
 Note that all endpoints return appropriate HTTP status codes to indicate the success or failure of the request.
 
 
-# TODO App - Client Side
+# todoApp-client
 This is a client-side Angular application for a TODO app. The UI is composed of multiple components:
 
 **Login Component:** A form to allow users to log in to the app.
