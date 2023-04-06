@@ -1,3 +1,5 @@
+To use this to-do web app, simply navigate to http://to-do-client-static-bucket.s3-website.eu-north-1.amazonaws.com/tasks in your web browser.
+
 # todoApp-server
 
 The server-side controllers of the TO-DO Web App are responsible for handling incoming requests and sending responses back to the client. There are two controllers: UserController and TaskController.
